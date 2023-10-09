@@ -1,5 +1,9 @@
 import MenuLeft from "./Components/HomePage/MenuLeft";
 
 export default function HomePage() {
-  return <MenuLeft></MenuLeft>;
+  return (
+    <>
+      <MenuLeft className="min-h-full"></MenuLeft>
+    </>
+  );
 }

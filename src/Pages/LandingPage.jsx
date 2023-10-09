@@ -4,7 +4,7 @@ export default function LandingPage() {
   return (
     <>
       {/*<SignInPage></SignInPage>*/}
-      <HomePage></HomePage>
+      <HomePage className="min-h-screen"></HomePage>
     </>
   );
 }
