@@ -2,8 +2,8 @@ import MenuLeft from "./Components/HomePage/MenuLeft";
 
 export default function HomePage() {
   return (
-    <>
-      <MenuLeft className="min-h-full"></MenuLeft>
-    </>
+    <div className="min-h-full flex ">
+      <MenuLeft />
+    </div>
   );
 }
