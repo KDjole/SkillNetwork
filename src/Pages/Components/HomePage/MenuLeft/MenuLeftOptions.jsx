@@ -18,10 +18,10 @@ const optionsArray = [
 
 export default function MenuLeftOptions() {
   return (
-    <ul className="list-none text-lg flex-col items-center ">
+    <ul className="list-none text-lg flex-col items-center pt-10">
       {optionsArray.map((e) => {
         return (
-          <li key={e.text} className="flex items-center">
+          <li key={e.text} className="flex gap-2 items-center pt-4">
             {<e.icon />}
             {e.text}
           </li>
