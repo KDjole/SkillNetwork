@@ -1,14 +1,16 @@
 import {
-  BiHome,
+  BiHeart,
   BiPalette,
   BiBowlHot,
   BiLeaf,
   BiAtom,
   BiCar,
+  BiSearchAlt,
 } from "react-icons/bi";
 
 const optionsArray = [
-  { text: `Home`, icon: BiHome },
+  { text: `Following`, icon: BiHeart },
+  { text: `Discover`, icon: BiSearchAlt },
   { text: `Cooking`, icon: BiBowlHot },
   { text: `Chemistry`, icon: BiAtom },
   { text: `Mechanics`, icon: BiCar },
