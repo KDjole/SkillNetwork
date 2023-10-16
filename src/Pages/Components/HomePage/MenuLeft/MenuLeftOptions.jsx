@@ -7,6 +7,7 @@ import {
   BiCar,
   BiSearchAlt,
 } from "react-icons/bi";
+import { BrowserRouter, NavLink, Router } from "react-router-dom";
 
 const optionsArray = [
   { text: `Following`, icon: BiHeart },
@@ -20,15 +21,19 @@ const optionsArray = [
 
 export default function MenuLeftOptions() {
   return (
-    <ul className="list-none text-lg flex-col items-center pt-10">
-      {optionsArray.map((e) => {
-        return (
-          <li key={e.text} className="flex gap-2 items-center pt-4">
-            {<e.icon />}
-            {e.text}
-          </li>
-        );
-      })}
-    </ul>
+    <BrowserRouter>
+      <ul className="list-none text-lg flex-col items-center pt-10">
+        {optionsArray.map((e) => {
+          return (
+            <NavLink to={`/${e.text}`} key={e.text}>
+              <li className="flex gap-2 items-center pt-4">
+                {<e.icon />}
+                {e.text}
+              </li>
+            </NavLink>
+          );
+        })}
+      </ul>
+    </BrowserRouter>
   );
 }

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 export default function Content() {
   return (
     <div className="w-2/4">
+      {/* 
       <BrowserRouter>
         <Routes>
           <Route path="Home" />
@@ -13,6 +14,7 @@ export default function Content() {
           <Route path="Woodworking" />
         </Routes>
       </BrowserRouter>
+      */}
     </div>
   );
 }
