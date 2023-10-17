@@ -6,7 +6,8 @@ export default function Content() {
       {/* 
       <BrowserRouter>
         <Routes>
-          <Route path="Home" />
+          <Route path="Discover" />
+          <Route path="Following">
           <Route path="Cooking" />
           <Route path="Chemistry" />
           <Route path="Mechanics" />
