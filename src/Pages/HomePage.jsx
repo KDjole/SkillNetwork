@@ -1,7 +1,7 @@
-import MenuLeft from "./Components/HomePage/MenuLeft";
-import Content from "./Components/HomePage/Content";
-import Profile from "./Components/HomePage/Profile";
-import ContentType from "./Components/HomePage/ContentType";
+import MenuLeft from "./HomePage/MenuLeft";
+import Content from "./HomePage/Content";
+import Profile from "./HomePage/Profile";
+import ContentType from "./HomePage/Content/ContentType";
 
 export default function HomePage() {
   return (

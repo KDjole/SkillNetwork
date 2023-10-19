@@ -1,6 +1,6 @@
-import ProfileOptions from "../Profile/ProfileOptions";
-import ProfilePicture from "../Profile/ProfilePicture";
-import ProfileName from "../Profile/ProfileName";
+import ProfileOptions from "./Profile/ProfileOptions";
+import ProfilePicture from "./Profile/ProfilePicture";
+import ProfileName from "./Profile/ProfileName";
 
 export default function Profile() {
   return (
