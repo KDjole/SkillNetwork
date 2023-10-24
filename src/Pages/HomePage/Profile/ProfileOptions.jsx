@@ -1,24 +1,29 @@
-import { useContext } from "react";
-import { ModalContext } from "../../../App";
+import { useSelector, useDispatch } from "react-redux";
+import { changeStatus } from "../../../Features/OpenModal/ModalSlice";
 
 export default function ProfileOptions() {
-  const { setUserSettingsModal } = useContext(ModalContext);
-  const openModal = () => {
-    setUserSettingsModal(true);
+  const options = [
+    { text: `Change E-mail`, key: `email` },
+    { text: `Change Username`, key: `username` },
+  ];
+  const open = useSelector((state) => state.modal.open);
+  const dispatch = useDispatch();
+  const openModal = (el) => {
+    dispatch(changeStatus(true, el));
   };
-  const options = [`Change E-mail`, `Change Username`, `Log out`];
 
   return (
     <ul className="mt-5">
       {options.map((e) => {
         return (
           <li
-            key={e}
-            onClick={openModal}
+            key={e.key}
+            onClick={() => openModal(e.key)}
             className="hover:cursor-pointer"
-          >{`${e}`}</li>
+          >{`${e.text}`}</li>
         );
       })}
+      <li className="hover:cursor-pointer">Log out</li>
     </ul>
   );
 }

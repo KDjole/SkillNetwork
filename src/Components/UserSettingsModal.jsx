@@ -1,11 +1,15 @@
 import { BiPlus } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
+import { useSelector, useDispatch } from "react-redux";
+import { changeStatus } from "../Features/OpenModal/ModalSlice";
 
-export default function UserSettingsModal({ open, change }) {
-  const changeModal = (e) => {
+export default function UserSettingsModal({}) {
+  const open = useSelector((state) => state.modal.open);
+  const dispatch = useDispatch();
+  const closeModal = (e) => {
     e.target.classList.contains("overlay") ||
     e.target.classList.contains("btnClose")
-      ? change()
+      ? dispatch(changeStatus(false, ""))
       : "";
   };
 
@@ -21,7 +25,7 @@ export default function UserSettingsModal({ open, change }) {
         >
           <div
             className="overlay w-screen h-screen bg-zinc-800/80 backdrop-blur-sm flex items-center justify-center"
-            onClick={changeModal}
+            onClick={closeModal}
           >
             <div className="w-1/3 h-3/4 bg-white rounded-lg p-5 relative">
               <BiPlus
