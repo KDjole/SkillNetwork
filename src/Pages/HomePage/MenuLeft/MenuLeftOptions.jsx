@@ -7,7 +7,7 @@ import {
   BiCar,
   BiSearchAlt,
 } from "react-icons/bi";
-import { BrowserRouter, NavLink, Router } from "react-router-dom";
+import { BrowserRouter, NavLink } from "react-router-dom";
 
 const optionsArray = [
   { text: `Following`, icon: BiHeart },
