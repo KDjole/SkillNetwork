@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import LandingPage from "./Pages/LandingPage";
-import UserSettingsModal from "./components/UserSettingsModal";
+import UserSettingsModal from "./Components/UserSettingsModal/UserSettingsModal";
 
 function App() {
   const [userSettingsModal, setUserSettingsModal] = useState(true);

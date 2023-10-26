@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { changeStatus } from "../../../Features/OpenModal/ModalSlice";
 
 export default function ProfileOptions() {
@@ -6,7 +6,6 @@ export default function ProfileOptions() {
     { text: `Change E-mail`, key: `email` },
     { text: `Change Username`, key: `username` },
   ];
-  const open = useSelector((state) => state.modal.open);
   const dispatch = useDispatch();
   const openModal = (el) => {
     dispatch(changeStatus(true, el));
