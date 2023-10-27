@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { BiPlus } from "react-icons/bi";
 import { motion } from "framer-motion";
+import Button from "./Button";
 
 export default function Modal({ children, closeModal }) {
   return (
@@ -22,6 +23,10 @@ export default function Modal({ children, closeModal }) {
           onClick={closeModal}
         />
         {children}
+        <div className="absolute bottom-5 flex block gap-20">
+          <Button type="primary">Ok</Button>
+          <Button type="secondary">Cancel</Button>
+        </div>
       </div>
     </motion.div>
   );
