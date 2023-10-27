@@ -4,7 +4,7 @@ import ProfileName from "./Profile/ProfileName";
 
 export default function Profile() {
   return (
-    <div className="w-1/4 border-l-2 border-black flex flex-col items-center pt-20">
+    <div className="w-1/4 border-l-2 border-black flex flex-col items-center pt-20 gap-2">
       <ProfilePicture />
       <ProfileName />
       <ProfileOptions />

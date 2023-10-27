@@ -12,7 +12,7 @@ export default function ProfileOptions() {
   };
 
   return (
-    <ul className="mt-5">
+    <ul className="mt-5 flex flex-col items-center gap-2">
       {options.map((e) => {
         return (
           <li
@@ -22,7 +22,7 @@ export default function ProfileOptions() {
           >{`${e.text}`}</li>
         );
       })}
-      <li className="hover:cursor-pointer">Log out</li>
+      <li className="hover:cursor-pointer text-myYellow font-bold">Log out</li>
     </ul>
   );
 }

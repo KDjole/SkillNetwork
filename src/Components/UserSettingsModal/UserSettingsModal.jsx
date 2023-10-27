@@ -9,7 +9,7 @@ export default function UserSettingsModal() {
   const dataForChange = useSelector((state) => state.modal.dataForChange);
   const dispatch = useDispatch();
 
-  const closeModal = (e) => {
+  const closeModal = () => {
     dispatch(changeStatus(false, ""));
   };
 

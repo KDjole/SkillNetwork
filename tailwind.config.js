@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         myGray: "#1d1f23",
-        myYellow: "#f8b500",
+        myYellow: "#f7a100",
       },
     },
   },
