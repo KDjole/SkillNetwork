@@ -10,10 +10,7 @@ export default function UserSettingsModal() {
   const dispatch = useDispatch();
 
   const closeModal = (e) => {
-    e.target.classList.contains("overlay") ||
-    e.target.classList.contains("btnClose")
-      ? dispatch(changeStatus(false, ""))
-      : "";
+    dispatch(changeStatus(false, ""));
   };
 
   return (
