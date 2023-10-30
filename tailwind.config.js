@@ -7,6 +7,9 @@ export default {
         myGray: "#1d1f23",
         myYellow: "#f7a100",
       },
+      boxShadow: {
+        custom: "0px 0px 7px black",
+      },
     },
   },
   plugins: [],

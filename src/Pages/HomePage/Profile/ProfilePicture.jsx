@@ -3,7 +3,7 @@ export default function ProfilePicture() {
     <img
       src="..\..\..\..\src\Images\profile.jpg"
       alt=""
-      className="w-28 rounded-full"
+      className="profile-image w-28 border-solid border-4 border-myYellow shadow-custom"
     />
   );
 }
