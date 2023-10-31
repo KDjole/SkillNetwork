@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         myGray: "#1d1f23",
-        myYellow: "#f7a100",
+        myYellow: "#fccf03",
       },
       zIndex: {
         minus: "-1",
