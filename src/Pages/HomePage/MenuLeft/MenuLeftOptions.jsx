@@ -8,6 +8,7 @@ import {
   BiSearchAlt,
 } from "react-icons/bi";
 import { BrowserRouter, NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const optionsArray = [
   { text: `Following`, icon: BiHeart },
@@ -26,10 +27,14 @@ export default function MenuLeftOptions() {
         {optionsArray.map((e) => {
           return (
             <NavLink to={`/${e.text}`} key={e.text}>
-              <li className="flex gap-2 items-center pt-4">
+              <motion.li
+                className="flex gap-2 items-center pt-4"
+                whileHover={{ scale: 1.2, originX: 0, color: "#fccf03" }}
+                transition={{ type: "spring", stiffness: 200 }}
+              >
                 {<e.icon />}
                 {e.text}
-              </li>
+              </motion.li>
             </NavLink>
           );
         })}
