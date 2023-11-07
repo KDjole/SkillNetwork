@@ -13,6 +13,12 @@ export default {
       boxShadow: {
         custom: "0px 0px 7px black",
       },
+      translate: {
+        minus: "-25%",
+      },
+      scale: {
+        250: "2.5",
+      },
     },
     customClasses: {
       myClip: "clip-path: ellipse(130px 140px at 10% 20%)",

@@ -25,7 +25,7 @@ export default function Modal({ children, closeModal }) {
         {children}
         <div className="absolute bottom-5 flex block gap-20">
           <Button type="primary">Ok</Button>
-          <Button type="secondary">Cancel</Button>
+          <Button type="primary">Cancel</Button>
         </div>
       </div>
     </motion.div>

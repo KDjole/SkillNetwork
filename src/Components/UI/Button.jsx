@@ -8,22 +8,20 @@ export default function Button({ type, children, click }) {
       return (
         <motion.button
           onClick={click}
-          className="p-2 text-white rounded bg-myYellow w-28 border-solid border-2 border-myGray"
-          whileHover={{
-            scale: 1.2,
-            transition: { duration: 1 },
-          }}
+          className="relative group p-2 text-myGray font-bold rounded w-28 border-solid border-2 border-myGray overflow-hidden"
         >
-          {children}
-        </motion.button>
-      );
-    case "secondary":
-      return (
-        <motion.button
-          onClick={click}
-          className="p-2 text-myGray rounded w-28  border-solid border-2 border-myGray"
-        >
-          {children}
+          <p className="relative z-10">{children}</p>
+          {[...Array(4)].map((_, i) => (
+            <motion.span
+              key={i}
+              className="absolute scale-150 w-12 h-12 bg-myYellow rounded-full transform translate-y-10 group-hover:scale-y-250 group-hover:translate-y-minus transition-all overflow-none"
+              style={{
+                left: `${i * 25}%`,
+                transitionDelay: `${i * 0.15}s`,
+                transitionDuration: "0.75s",
+              }}
+            ></motion.span>
+          ))}
         </motion.button>
       );
     default:
