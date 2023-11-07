@@ -26,7 +26,11 @@ export default function MenuLeftOptions() {
       <ul className="list-none text-lg flex-col items-center pt-10">
         {optionsArray.map((e) => {
           return (
-            <NavLink to={`/${e.text}`} key={e.text}>
+            <NavLink
+              to={`/${e.text}`}
+              key={e.text}
+              className={({ isActive }) => [isActive ? "font-bold" : ""]}
+            >
               <motion.li
                 className="flex gap-2 items-center pt-4"
                 whileHover={{ scale: 1.2, originX: 0, color: "#fccf03" }}
